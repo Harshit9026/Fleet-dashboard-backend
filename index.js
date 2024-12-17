@@ -10,6 +10,10 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Fleet Monitoring Dashboard Backend!');
+});
+
 // Routes
 app.use('/api/robots', robotRoutes);
 
